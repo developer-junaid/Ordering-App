@@ -1,0 +1,50 @@
+.input-row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.first-input {
+
+  margin: 0px 8px 0px 0px;
+}
+.thirds {
+  display: inline-block;
+  width: calc(33% - 8px);
+}
+.last-input {
+  margin: 0px 0px 0px 8px;
+}
+
+.wrapper {
+  font-family: Roboto, sans-serif;
+  position: relative;
+  padding: 12px 0px;
+}
+
+.completed-label {
+  color: rgb(112, 117, 122);
+  background-color: white;
+  font-size: 12px;
+  left: 20px;
+  line-height: 12px;
+  position: absolute;
+  margin: -8px;
+  padding: 4px;
+}
+
+.input {
+  box-sizing: border-box !important;
+  color: rgb(60, 64, 67) !important;
+  display: block;
+  font-family: Roboto;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  width: 100% !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224) !important;
+  border-image: initial;
+  border-radius: 4px;
+  margin: 0px !important;
+  
+}

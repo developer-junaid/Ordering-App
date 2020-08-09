@@ -1,0 +1,121 @@
+
+.small-container {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 8px;
+  margin: 16px 0px;
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  float: left;
+  height: 28px;
+  width: 112px;
+  margin: 24px 0px 24px 24px;
+}
+
+.content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.label-wrapper {
+  float: left;
+  margin-left: 24px;
+  text-align: initial;
+}
+
+.label {
+  color: rgb(60, 64, 67);
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px 0px 4px;
+}
+
+.description {
+  color: rgb(112, 117, 122);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0px 0px 16px;
+}
+
+.button {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Google Sans", sans-serif;
+  font-size: 14px;
+  min-width: 90px;
+  background: rgb(26, 115, 232);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(26, 115, 232);
+  border-image: initial;
+  border-radius: 4px;
+  margin: 22px 16px;
+  padding: 10px 12px;
+}
+
+.select-wrapper {
+  display: inline-block;
+  width: 240px;
+  margin: 0px 16px;
+}
+
+.wrapper {
+  font-family: Roboto, sans-serif;
+  position: relative;
+  padding: 12px 0px;
+}
+
+.placeholder {
+  color: rgb(112, 117, 122);
+}
+
+select {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  height: 56px;
+  line-height: 24px;
+  outline: none;
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+option {
+  color: rgb(112, 117, 122);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0.5em;
+}
+
+.svg-append {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+}

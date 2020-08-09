@@ -1,38 +1,99 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url("./images/background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Google Sans";
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  height: 32px;
+  width: 174px;
+  padding: 16px 24px;
+}
+
+.stepper {
+  width: 100% !important;
+}
+
+.main-container {
+  position: relative;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 46px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 3em;
+  transition: width 0.5s ease 0s;
+  max-width: 720px;
+  width: 67%;
+}
+
+.terms {
+  color: rgb(112, 117, 122);
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  padding: 36px 0px 0px;
+}
+
+.bold {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+}
+
+.link {
+  color: rgb(26, 115, 232);
+  text-decoration: none;
+}
+
+.footer-logo {
+  height: 28px;
+  width: 142px;
+  margin: 20px auto;
+}
+
+.header {
+  padding: 0;
+  margin: 40px 0;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-big {
+  color: black;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-small {
+  color: rgb(112, 117, 122);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  padding-top: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-content {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
 }
