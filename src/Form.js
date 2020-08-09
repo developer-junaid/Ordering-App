@@ -16,6 +16,8 @@ const Form = () => {
         return <SecondStep />;
       case 3:
         return <ThirdStep />;
+      default:
+        return <FirstStep />;
     }
   };
 

@@ -13,7 +13,7 @@ const App = () => {
         <Form />
       </div>
       <div className="footer-logo">
-        <img src="https://d1j5yzf6fkxjod.cloudfront.net/images/oa-google.svg" />
+        <img alt='' src="https://d1j5yzf6fkxjod.cloudfront.net/images/oa-google.svg" />
       </div>
     </StepProvider>
   )
