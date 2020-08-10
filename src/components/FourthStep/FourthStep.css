@@ -92,6 +92,7 @@
   border-image: initial;
   border-radius: 4px;
   margin: auto;
+  margin-bottom: 50px;
   padding: 20px 48px 48px;
   transition: width 0.5s ease 0s;
 }
@@ -150,4 +151,114 @@
   font-family: Roboto, sans-serif;
   position: relative;
   padding: 12px 0px;
+}
+
+.selection {
+  color: rgb(60, 64, 67);
+}
+
+.svg-append {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+}
+
+.completed-label {
+  color: rgb(112, 117, 122);
+  background-color: white;
+  font-size: 12px;
+  left: 20px;
+  line-height: 12px;
+  position: absolute;
+  margin: -8px;
+  padding: 4px;
+}
+
+select {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  height: 56px;
+  line-height: 24px;
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+option {
+  color: rgb(112, 117, 122);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0.5em;
+}
+
+.placeholder {
+  color: rgb(112, 117, 122);
+}
+
+#nav {
+  bottom: 52px;
+  left: 30px;
+  margin-left: auto;
+  position: relative;
+  text-align: right;
+  width: 30px;
+}
+
+#exit-nav {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 3;
+}
+
+#nav-prompt {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px;
+  bottom: 73px;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  left: calc(100% - 200px);
+  line-height: 24px;
+  position: absolute;
+  width: 150px;
+  z-index: 4;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.update {
+  color: rgb(255, 255, 255);
+  float: right;
+  background: rgb(26, 115, 232);
+}
+
+.button {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+  width: 98px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 10px 16px;
 }

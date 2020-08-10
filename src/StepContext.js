@@ -14,15 +14,18 @@ export const StepProvider = (props) => {
   const [toggleCurbside, setToggleCurbside] = useState(false);
   const [togglePaymentArrival, setTogglePaymentArrival] = useState(false);
   const [togglePaymentOnline, setTogglePaymentOnline] = useState(false);
+  const [hours, setHours] = useState(true);
+  const [editHours, setEditHours] = useState(false);
+
   // State for Circles
   const [circleState, setCircleState] = useState({
-    'circle1': false,
-    'circle2': false,
-    'circle3': false,
-    'circle4': false,
-    'circle5': false,
-    'circle6': false,
-    'circle7': false,
+    circle1: false,
+    circle2: false,
+    circle3: false,
+    circle4: false,
+    circle5: false,
+    circle6: false,
+    circle7: false,
   });
 
   return (
@@ -50,6 +53,10 @@ export const StepProvider = (props) => {
         setTogglePaymentOnline,
         circleState,
         setCircleState,
+        hours,
+        editHours,
+        setEditHours,
+        setHours,
       }}
     >
       {props.children}
