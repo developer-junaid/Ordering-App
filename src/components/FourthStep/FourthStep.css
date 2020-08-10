@@ -45,6 +45,13 @@
   color: rgb(112, 117, 122);
 }
 
+.closed:hover {
+  color: blue !important;
+}
+.row:hover .element {
+  color: blue !important;
+}
+
 .none {
   display: none;
 }
