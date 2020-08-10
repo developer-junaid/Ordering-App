@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import '../../App.css';
 import { StepContext } from '../../StepContext.js';
 import './FourthStep.css';
@@ -6,8 +6,23 @@ import './FourthStep.css';
 const FourthStep = () => {
 
   // Use context 
-  const { circleState, setCircleState, hours, setHours, editHours, setEditHours } = useContext(StepContext);
+  const { circleState, setCircleState, hours, setHours, editHours, setEditHours, status, setStatus } = useContext(StepContext);
 
+  // On update
+  const handleUpdate = () => {
+    const hoursOption = document.querySelector('#selectHours').value;
+    if (hoursOption === '0') {
+      circleState['circle1'] ? setStatus({ ...status, mon: "Open" }) : setStatus({ ...status, mon: 'Closed' });
+    }
+    else if (hoursOption === '1') {
+      circleState['circle1'] ? setStatus({ ...status, mon: "Open 24 hours" }) : setStatus({ ...status, mon: 'Closed' });
+    }
+    else {
+      circleState['circle1'] ? setStatus({ ...status, mon: "Closed" }) : setStatus({ ...status, mon: 'Closed' });
+    }
+
+    console.log(status);
+  }
 
 
   return (
@@ -89,8 +104,8 @@ const FourthStep = () => {
                     }
 
                   }}
-                    required class="selection">
-                    <option selected value="0" >Open</option>
+                    required className="selection">
+                    <option value="0" >Open</option>
                     <option value="1">Open 24 hours</option>
                     <option value="2">Closed</option>
                   </select>
@@ -237,7 +252,7 @@ const FourthStep = () => {
                           </svg>
                         </div>
                       </div> : <span></span>}
-                    <div className="button update">Update</div>
+                    <div className="button update" onClick={handleUpdate}>Update</div>
 
                   </div>
                 </div>

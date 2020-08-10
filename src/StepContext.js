@@ -28,6 +28,17 @@ export const StepProvider = (props) => {
     circle7: false,
   });
 
+  // State for Status
+  const [status, setStatus] = useState({
+    mon: "Closed",
+    tue: "Closed",
+    wed: "Closed",
+    thu: "Closed",
+    fri: "Closed",
+    sat: "Closed",
+    sun: "Closed",
+  });
+
   return (
     <StepContext.Provider
       value={{
@@ -57,6 +68,8 @@ export const StepProvider = (props) => {
         editHours,
         setEditHours,
         setHours,
+        status,
+        setStatus,
       }}
     >
       {props.children}
