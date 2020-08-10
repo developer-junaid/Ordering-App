@@ -4,6 +4,8 @@ import { Stepper, StepLabel, Step } from "@material-ui/core";
 import FirstStep from "./components/FirstStep/FirstStep";
 import SecondStep from "./components/SecondStep/SecondStep";
 import ThirdStep from "./components/ThirdStep/ThirdStep";
+import FourthStep from "./components/FourthStep/FourthStep";
+import FifthStep from "./components/FifthStep/FifthStep";
 import { StepContext } from "./StepContext";
 
 const Form = () => {
@@ -16,6 +18,10 @@ const Form = () => {
         return <SecondStep />;
       case 3:
         return <ThirdStep />;
+      case 4:
+        return <FourthStep />;
+      case 5:
+        return <FifthStep />;
       default:
         return <FirstStep />;
     }

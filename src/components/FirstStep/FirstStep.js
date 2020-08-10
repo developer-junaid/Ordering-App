@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StepContext } from "../../StepContext";
 import "./FirstStep.css";
-import '../../App.css';
+import "../../App.css";
 
 const FirstStep = () => {
   // Using Context
@@ -9,15 +9,19 @@ const FirstStep = () => {
 
   // Handle Clover
   const handleClover = () => {
-    alert('You are being redirected to Clover')
-    window.open('https://www.clover.com/dashboard/login?webRedirectUrl=https://www.clover.com/setupapp/online-ordering');
-  }
+    alert("You are being redirected to Clover");
+    window.open(
+      "https://www.clover.com/dashboard/login?webRedirectUrl=https://www.clover.com/setupapp/online-ordering"
+    );
+  };
 
   // Handle Square
   const handleSquare = () => {
-    alert('You are being redirected to Square')
-    window.open('https://squareup.com/login?return_to=%2Foauth2%2Fauthorize%3Fclient_id%3Dsq0idp-CigLSBENBsZhYgCENuepaA%26response_type%3Dcode%26scope%3DMERCHANT_PROFILE_READ%2BPAYMENTS_WRITE%2BCUSTOMERS_READ%2BCUSTOMERS_WRITE%2BORDERS_READ%2BORDERS_WRITE%2BITEMS_READ%2BITEMS_WRITE%2BPAYMENTS_WRITE_ADDITIONAL_RECIPIENTS%26state%3Dab9a0253-718d-40c2-9b63-eccb5f87fd62');
-  }
+    alert("You are being redirected to Square");
+    window.open(
+      "https://squareup.com/login?return_to=%2Foauth2%2Fauthorize%3Fclient_id%3Dsq0idp-CigLSBENBsZhYgCENuepaA%26response_type%3Dcode%26scope%3DMERCHANT_PROFILE_READ%2BPAYMENTS_WRITE%2BCUSTOMERS_READ%2BCUSTOMERS_WRITE%2BORDERS_READ%2BORDERS_WRITE%2BITEMS_READ%2BITEMS_WRITE%2BPAYMENTS_WRITE_ADDITIONAL_RECIPIENTS%26state%3Dab9a0253-718d-40c2-9b63-eccb5f87fd62"
+    );
+  };
 
   return (
     <div className="card">
@@ -32,25 +36,41 @@ const FirstStep = () => {
       <div className="card-content">
         {/* Box 1 */}
         <div className="small-container">
-          <img src="https://d1j5yzf6fkxjod.cloudfront.net/images/clover-logo.svg" className='icon' alt="" />
+          <img
+            src="https://d1j5yzf6fkxjod.cloudfront.net/images/clover-logo.svg"
+            className="icon"
+            alt=""
+          />
           <div className="content-wrapper">
             <div className="label-wrapper">
               <div className="label">Clover</div>
-              <div className="description">Connect and import your Clover menu data</div>
+              <div className="description">
+                Connect and import your Clover menu data
+              </div>
             </div>
-            <div className="button" onClick={handleClover}>Connect</div>
+            <div className="button" onClick={handleClover}>
+              Connect
+            </div>
           </div>
         </div>
 
         {/* Box 2 */}
         <div className="small-container">
-          <img src="https://d1j5yzf6fkxjod.cloudfront.net/images/square-logo.svg" className='icon' alt="" />
+          <img
+            src="https://d1j5yzf6fkxjod.cloudfront.net/images/square-logo.svg"
+            className="icon"
+            alt=""
+          />
           <div className="content-wrapper">
             <div className="label-wrapper">
               <div className="label">Square</div>
-              <div className="description">Connect and import your Square merchant data</div>
+              <div className="description">
+                Connect and import your Square merchant data
+              </div>
             </div>
-            <div className="button" onClick={handleSquare}>Connect</div>
+            <div className="button" onClick={handleSquare}>
+              Connect
+            </div>
           </div>
         </div>
 
@@ -59,11 +79,19 @@ const FirstStep = () => {
           <div className="content-wrapper">
             <div className="label-wrapper">
               <div className="label">Another POS system</div>
-              <div className="description">Select your POS system from the following options</div>
+              <div className="description">
+                Select your POS system from the following options
+              </div>
             </div>
             <div className="select-wrapper">
               <div className="wrapper">
-                <select required name id="select" onChange={() => setStep(2)} className='placeholder'>
+                <select
+                  required
+                  name
+                  id="select"
+                  onChange={() => setStep(2)}
+                  className="placeholder"
+                >
                   <option value>Choose one</option>
                   <option value="0">AccuPOS</option>
                   <option value="1">Aldelo POS</option>
@@ -93,12 +121,17 @@ const FirstStep = () => {
                   <option value="25">Other</option>
                 </select>
                 <div className="svg-append">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path d="M7 10L12 15L17 10H7Z" fill="#5F6368"></path>
                   </svg>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -108,35 +141,35 @@ const FirstStep = () => {
           <div className="content-wrapper">
             <div className="label-wrapper">
               <div className="label">No POS system</div>
-              <div className="description">View other ways of processing orders</div>
+              <div className="description">
+                View other ways of processing orders
+              </div>
             </div>
-            <div className="button" onClick={() => setStep(2)}>Next</div>
+            <div className="button" onClick={() => setStep(2)}>
+              Next
+            </div>
           </div>
         </div>
 
         {/* Terms and Conditions */}
         <div className="terms">
           <span>
-            <span className="bold">
-              Please read:
-            </span> By clicking “Next”, you are agreeing to
-            <a class="link" href="https://the.ordering.app/merchant-terms/">
-              The Ordering.app’s Merchant Terms of Service</a>
-              . In addition,
-             for the purpose of enabling The Ordering.App to receive and send
-             you orders originating from certain Google services, you agree to
-             <a class="link" href="https://the.ordering.app/google-terms/">
-              Google’s Food Ordering Terms of Service</a>
-              . In particular, you
-             agree to handle user data with care and solely in accordance with
-             the terms of these agreements.
-
+            <span className="bold">Please read:</span> By clicking “Next”, you
+            are agreeing to
+            <a className="link" href="https://the.ordering.app/merchant-terms/">
+              The Ordering.app’s Merchant Terms of Service
+            </a>
+            . In addition, for the purpose of enabling The Ordering.App to
+            receive and send you orders originating from certain Google
+            services, you agree to
+            <a className="link" href="https://the.ordering.app/google-terms/">
+              Google’s Food Ordering Terms of Service
+            </a>
+            . In particular, you agree to handle user data with care and solely
+            in accordance with the terms of these agreements.
           </span>
         </div>
-
-
       </div>
-
     </div>
   );
 };
