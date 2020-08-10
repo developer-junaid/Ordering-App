@@ -1,0 +1,153 @@
+.edit {
+  color: rgb(26, 115, 232);
+  margin: auto auto 20px;
+  background-color: white;
+}
+.button {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+  width: 98px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+
+.row {
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 0px;
+}
+
+.element {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dow {
+  font-weight: 500;
+  min-width: 20%;
+  text-align: left;
+}
+
+.status {
+  width: 30%;
+  text-align: right;
+}
+
+.closed {
+  color: rgb(112, 117, 122);
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+#overlay {
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+#scrim {
+  background-color: rgb(32, 33, 36);
+  height: 100%;
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+#overlay-inner {
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  max-width: 480px;
+  position: absolute;
+  width: 90%;
+  top: -100px;
+  transform: translateX(-50%);
+  overflow: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+  border-radius: 4px;
+  margin: auto;
+  padding: 20px 48px 48px;
+  transition: width 0.5s ease 0s;
+}
+
+.close {
+  cursor: pointer;
+  left: 28px;
+  margin-left: auto;
+  position: relative;
+  text-align: right;
+  width: 40px;
+}
+
+.directions {
+  font-family: "Google Sans", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.unselected {
+  color: rgb(112, 117, 122);
+  background: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 220, 224);
+  border-image: initial;
+}
+
+.selected {
+  color: rgb(255, 255, 255);
+  background: rgb(26, 115, 232);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(26, 115, 232);
+  border-image: initial;
+}
+
+.circle {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  margin-right: 6px;
+  line-height: 24px;
+  padding-top: 12px;
+  text-align: center;
+  width: 48px;
+  border-radius: 24px;
+}
+
+.wrapper {
+  font-family: Roboto, sans-serif;
+  position: relative;
+  padding: 12px 0px;
+}
