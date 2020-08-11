@@ -16,27 +16,42 @@ export const StepProvider = (props) => {
   const [togglePaymentOnline, setTogglePaymentOnline] = useState(false);
   const [hours, setHours] = useState(true);
   const [editHours, setEditHours] = useState(false);
-
+  const [availableHours, setAvailableHours] = useState({
+    openingHours: null,
+    closingHours: null,
+  });
+  const [updateButton, setUpdateButton] = useState(false);
   // State for Circles
   const [circleState, setCircleState] = useState({
-    "mon": false,
-    "tue": false,
-    "wed": false,
-    "thu": false,
-    "fri": false,
-    "sat": false,
-    "sun": false,
+    mon: false,
+    tue: false,
+    wed: false,
+    thu: false,
+    fri: false,
+    sat: false,
+    sun: false,
   });
 
   // State for Status
   const [status, setStatus] = useState({
-    "mon": "Closed",
-    "tue": "Closed",
-    "wed": "Closed",
-    "thu": "Closed",
-    "fri": "Closed",
-    "sat": "Closed",
-    "sun": "Closed",
+    mon: "Closed",
+    tue: "Closed",
+    wed: "Closed",
+    thu: "Closed",
+    fri: "Closed",
+    sat: "Closed",
+    sun: "Closed",
+  });
+
+  // State for Span Class
+  const [spanClass, setSpanClass] = useState({
+    mon: "closed",
+    tue: "closed",
+    wed: "closed",
+    thu: "closed",
+    fri: "closed",
+    sat: "closed",
+    sun: "closed",
   });
 
   return (
@@ -70,6 +85,12 @@ export const StepProvider = (props) => {
         setHours,
         status,
         setStatus,
+        availableHours,
+        setAvailableHours,
+        updateButton,
+        setUpdateButton,
+        spanClass, 
+        setSpanClass,
       }}
     >
       {props.children}

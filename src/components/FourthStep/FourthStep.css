@@ -269,3 +269,20 @@ option {
   border-radius: 4px;
   padding: 10px 16px;
 }
+
+.valid {
+  background: rgb(26, 115, 232);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(26, 115, 232);
+  border-image: initial;
+}
+
+.invalid {
+  cursor: default;
+  background: rgb(138, 180, 248);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(138, 180, 248);
+  border-image: initial;
+}

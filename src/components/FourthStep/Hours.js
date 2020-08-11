@@ -1,63 +1,80 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../../App.css";
 import "./FourthStep.css";
-
+import { StepContext } from "../../StepContext";
 const Hours = () => {
+  // Use Context
+  const { availableHours, setAvailableHours } = useContext(StepContext);
+
+  // Use Effect
+
   return (
     <div>
       <div>
         {/* Opening Time */}
         <div className="wrapper">
-          <select name="" className="placeholder" required id="select">
+          <select
+            name=""
+            className="placeholder"
+            onChange={(e) => {
+              setAvailableHours({
+                ...availableHours,
+                openingHours: e.target.value,
+              });
+              console.log(availableHours);
+            }}
+            required
+            id="openingHours"
+          >
             <option value>Opening time</option>
-            <option value="0">12:30 AM</option>
-            <option value="1">1:00 AM</option>
-            <option value="2">1:30 AM</option>
-            <option value="3">2:00 AM</option>
-            <option value="4">2:30 AM</option>
-            <option value="5">3:00 AM</option>
-            <option value="6">3:30 AM</option>
-            <option value="7">4:00 AM</option>
-            <option value="8">4:30 AM</option>
-            <option value="9">5:00 AM</option>
-            <option value="10">5:30 AM</option>
-            <option value="11">6:00 AM</option>
-            <option value="12">6:30 AM</option>
-            <option value="13">7:00 AM</option>
-            <option value="14">7:30 AM</option>
-            <option value="15">8:00 AM</option>
-            <option value="16">8:30 AM</option>
-            <option value="17">9:00 AM</option>
-            <option value="18">9:30 AM</option>
-            <option value="19">10:00 AM</option>
-            <option value="20">10:30 AM</option>
-            <option value="21">11:00 AM</option>
-            <option value="22">11:30 AM</option>
-            <option value="23">12:00 PM</option>
-            <option value="24">12:30 PM</option>
-            <option value="25">1:00 PM</option>
-            <option value="26">1:30 PM</option>
-            <option value="27">2:00 PM</option>
-            <option value="28">2:30 PM</option>
-            <option value="29">3:00 PM</option>
-            <option value="30">3:30 PM</option>
-            <option value="31">4:00 PM</option>
-            <option value="32">4:30 PM</option>
-            <option value="33">5:00 PM</option>
-            <option value="34">5:30 PM</option>
-            <option value="35">6:00 PM</option>
-            <option value="36">6:30 PM</option>
-            <option value="37">7:00 PM</option>
-            <option value="38">7:30 PM</option>
-            <option value="39">8:00 PM</option>
-            <option value="40">8:30 PM</option>
-            <option value="41">9:00 PM</option>
-            <option value="42">9:30 PM</option>
-            <option value="43">10:00 PM</option>
-            <option value="44">10:30 PM</option>
-            <option value="45">11:00 PM</option>
-            <option value="46">11:30 PM</option>
-            <option value="47">12:00 AM</option>
+            <option value="12:30 AM">12:30 AM</option>
+            <option value="1:00 AM">1:00 AM</option>
+            <option value="1:30 AM">1:30 AM</option>
+            <option value="2:00 AM">1:30 AM</option>
+            <option value="2:30 AM">2:30 AM</option>
+            <option value="3:00 AM">3:00 AM</option>
+            <option value="3:30 AM">3:30 AM</option>
+            <option value="4:00 AM">4:00 AM</option>
+            <option value="4:30 AM">4:30 AM</option>
+            <option value="5:00 AM9">5:00 AM</option>
+            <option value="5:30 AM">5:30 AM</option>
+            <option value="6:00 AM">6:00 AM</option>
+            <option value="6:30 AM">6:30 AM</option>
+            <option value="7:00 AM">7:00 AM</option>
+            <option value="7:30 AM">7:30 AM</option>
+            <option value="8:00 AM">8:00 AM</option>
+            <option value="8:30 AM">8:30 AM</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="9:30 AM">9:30 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="10:30 AM">10:30 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="11:30 AM">11:30 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="12:30 PM">12:30 PM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="1:30 PM">1:30 PM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="2:30 PM">2:30 PM</option>
+            <option value="3:00 PM">3:00 PM</option>
+            <option value="3:30 PM">3:30 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="4:30 PM">4:30 PM</option>
+            <option value="5:00 PM">5:00 PM</option>
+            <option value="5:30 PM">5:30 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="6:30 PM">6:30 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+            <option value="7:30 PM">7:30 PM</option>
+            <option value="8:00 PM">8:00 PM</option>
+            <option value="8:30 PM">8:30 PM</option>
+            <option value="9:00 PM">9:00 PM</option>
+            <option value="9:30 PM">9:30 PM</option>
+            <option value="10:00 PM">10:00 PM</option>
+            <option value="10:30 PM">10:30 PM</option>
+            <option value="11:00 PM">11:00 PM</option>
+            <option value="11:30 PM">11:30 PM</option>
+            <option value="12:00 AM">12:00 AM</option>
           </select>
           <div className="svg-append">
             <svg
@@ -74,56 +91,68 @@ const Hours = () => {
 
         {/* Closing Time */}
         <div className="wrapper">
-          <select name="" className="placeholder" required id="select">
+          <select
+            name=""
+            className="placeholder"
+            onChange={(e) => {
+              setAvailableHours({
+                ...availableHours,
+                closingHours: e.target.value,
+              });
+              console.log(availableHours);
+            }}
+            required
+            id="closingHours"
+          >
             <option value>Closing time</option>
-            <option value="0">12:30 AM</option>
-            <option value="1">1:00 AM</option>
-            <option value="2">1:30 AM</option>
-            <option value="3">2:00 AM</option>
-            <option value="4">2:30 AM</option>
-            <option value="5">3:00 AM</option>
-            <option value="6">3:30 AM</option>
-            <option value="7">4:00 AM</option>
-            <option value="8">4:30 AM</option>
-            <option value="9">5:00 AM</option>
-            <option value="10">5:30 AM</option>
-            <option value="11">6:00 AM</option>
-            <option value="12">6:30 AM</option>
-            <option value="13">7:00 AM</option>
-            <option value="14">7:30 AM</option>
-            <option value="15">8:00 AM</option>
-            <option value="16">8:30 AM</option>
-            <option value="17">9:00 AM</option>
-            <option value="18">9:30 AM</option>
-            <option value="19">10:00 AM</option>
-            <option value="20">10:30 AM</option>
-            <option value="21">11:00 AM</option>
-            <option value="22">11:30 AM</option>
-            <option value="23">12:00 PM</option>
-            <option value="24">12:30 PM</option>
-            <option value="25">1:00 PM</option>
-            <option value="26">1:30 PM</option>
-            <option value="27">2:00 PM</option>
-            <option value="28">2:30 PM</option>
-            <option value="29">3:00 PM</option>
-            <option value="30">3:30 PM</option>
-            <option value="31">4:00 PM</option>
-            <option value="32">4:30 PM</option>
-            <option value="33">5:00 PM</option>
-            <option value="34">5:30 PM</option>
-            <option value="35">6:00 PM</option>
-            <option value="36">6:30 PM</option>
-            <option value="37">7:00 PM</option>
-            <option value="38">7:30 PM</option>
-            <option value="39">8:00 PM</option>
-            <option value="40">8:30 PM</option>
-            <option value="41">9:00 PM</option>
-            <option value="42">9:30 PM</option>
-            <option value="43">10:00 PM</option>
-            <option value="44">10:30 PM</option>
-            <option value="45">11:00 PM</option>
-            <option value="46">11:30 PM</option>
-            <option value="47">12:00 AM</option>
+            <option value="12:30 AM">12:30 AM</option>
+            <option value="1:00 AM">1:00 AM</option>
+            <option value="1:30 AM">1:30 AM</option>
+            <option value="2:00 AM">1:30 AM</option>
+            <option value="2:30 AM">2:30 AM</option>
+            <option value="3:00 AM">3:00 AM</option>
+            <option value="3:30 AM">3:30 AM</option>
+            <option value="4:00 AM">4:00 AM</option>
+            <option value="4:30 AM">4:30 AM</option>
+            <option value="5:00 AM9">5:00 AM</option>
+            <option value="5:30 AM">5:30 AM</option>
+            <option value="6:00 AM">6:00 AM</option>
+            <option value="6:30 AM">6:30 AM</option>
+            <option value="7:00 AM">7:00 AM</option>
+            <option value="7:30 AM">7:30 AM</option>
+            <option value="8:00 AM">8:00 AM</option>
+            <option value="8:30 AM">8:30 AM</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="9:30 AM">9:30 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="10:30 AM">10:30 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="11:30 AM">11:30 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="12:30 PM">12:30 PM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="1:30 PM">1:30 PM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="2:30 PM">2:30 PM</option>
+            <option value="3:00 PM">3:00 PM</option>
+            <option value="3:30 PM">3:30 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="4:30 PM">4:30 PM</option>
+            <option value="5:00 PM">5:00 PM</option>
+            <option value="5:30 PM">5:30 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="6:30 PM">6:30 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+            <option value="7:30 PM">7:30 PM</option>
+            <option value="8:00 PM">8:00 PM</option>
+            <option value="8:30 PM">8:30 PM</option>
+            <option value="9:00 PM">9:00 PM</option>
+            <option value="9:30 PM">9:30 PM</option>
+            <option value="10:00 PM">10:00 PM</option>
+            <option value="10:30 PM">10:30 PM</option>
+            <option value="11:00 PM">11:00 PM</option>
+            <option value="11:30 PM">11:30 PM</option>
+            <option value="12:00 AM">12:00 AM</option>
           </select>
           <div className="svg-append">
             <svg

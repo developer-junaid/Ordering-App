@@ -13,6 +13,8 @@ const FourthStep = () => {
     setHours,
     editHours,
     setEditHours,
+    step, 
+    setStep,
     status,
     setStatus,
   } = useContext(StepContext);
@@ -85,6 +87,22 @@ const FourthStep = () => {
             <span className="closed">{status["sun"]}</span>
           </div>
         </div>
+      </div>
+      {/* Buttons */}
+      <div className="button-container">
+        <input
+          type="button"
+          onClick={() => setStep(3)}
+          className="option back"
+          value="Back"
+        />
+        <input
+          type="submit"
+          id="next-btn"
+          onClick={() => setStep(5)}
+          className="next option valid"
+          value="Next"
+        />
       </div>
     </div>
   );
