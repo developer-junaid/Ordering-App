@@ -19,24 +19,24 @@ export const StepProvider = (props) => {
 
   // State for Circles
   const [circleState, setCircleState] = useState({
-    circle1: false,
-    circle2: false,
-    circle3: false,
-    circle4: false,
-    circle5: false,
-    circle6: false,
-    circle7: false,
+    "mon": false,
+    "tue": false,
+    "wed": false,
+    "thu": false,
+    "fri": false,
+    "sat": false,
+    "sun": false,
   });
 
   // State for Status
   const [status, setStatus] = useState({
-    mon: "Closed",
-    tue: "Closed",
-    wed: "Closed",
-    thu: "Closed",
-    fri: "Closed",
-    sat: "Closed",
-    sun: "Closed",
+    "mon": "Closed",
+    "tue": "Closed",
+    "wed": "Closed",
+    "thu": "Closed",
+    "fri": "Closed",
+    "sat": "Closed",
+    "sun": "Closed",
   });
 
   return (
