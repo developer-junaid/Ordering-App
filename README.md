@@ -4,7 +4,7 @@
 
 
 # HOMEPAGE
-<img src='/images/NikeSite.png'/>
+<img src='/images/ordering.png'/>
 
 
 http://test-ordering-app.surge.sh/
